@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="new-test-suite.xml" />
+	<munit:test name="new-test-suite-put:\(id):capston-project-configTest" doc:id="d4d47dbd-b5b9-49b7-b0e7-3928d7680ca0" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to put:\(id):capston-project-config" doc:id="38039b09-5cf7-431d-b0f5-04dbbc7c953f" name="put:\(id):capston-project-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="new-test-suite-delete:\(id):capston-project-configTest" doc:id="5f9d58d0-8af8-48c8-85f0-bef80390e6ed" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to delete:\(id):capston-project-config" doc:id="fae7479f-9e30-4abb-851e-3d9896462b03" name="delete:\(id):capston-project-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="new-test-suite-get:\users:capston-project-configTest" doc:id="ad0f9f6a-6e97-4d85-af78-34a7a465d317" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\users:capston-project-config" doc:id="11cd6df8-dae0-4eb0-84f6-b6dbee211f68" name="get:\users:capston-project-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="new-test-suite-get:\(id):capston-project-configTest" doc:id="a8f43889-84f1-4277-88a5-647334696480" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\(id):capston-project-config" doc:id="ecde8824-8fbd-4288-a683-93d2d57d706d" name="get:\(id):capston-project-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="new-test-suite-post:\users:capston-project-configTest" doc:id="e28cc67c-d259-4607-b044-4d2166980bbc" description="Test">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="823c564a-2259-4da6-9739-ad3a29b9b2bf" processor="flow">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="post:\users:capston-project-config" attributeName="name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value='{
+               
+                "first":"hailu",
+                "last" : "kebede",
+                "department":"mulesoft"
+ }' />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\users:capston-project-config" doc:id="4d860d8e-400e-4088-b6db-90cce1b1adea" name="post:\users:capston-project-config"/>
+		</munit:execution>
+	</munit:test>
+
+
+</mule>
